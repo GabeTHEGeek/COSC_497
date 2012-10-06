@@ -1,0 +1,14 @@
+Short - Project Analysis
+
+What did you find most satisfying?
+
+Working and solving such problems as collision detection between the objects, the mouse, and the stage. I also had to do a lot of research on the concept of generating a object from it center. Once I realized how to do it, I solved the issue no problem.
+
+What did you find least satisfying?
+I can't say there was anything not satisfying. Every time I ran into a problem, it just made me think harder and get into the project more. I guess if I had to choose one it would be that I didn't get perfect collision on the object without the stage listening for a click. This made my score counter take away points instead of giving.
+
+What did you learn?
+In this project, I learned how to create an object based on it's specific X and Y properties independent from the stage.
+
+What did you fail at?	
+I failed at completely getting my logic to work during the collision between the object and stage.
