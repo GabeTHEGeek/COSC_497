@@ -14,10 +14,9 @@ package engine
 		static private const UP			: uint = 0;
 		static private const PRESS		: uint = 1;
 		static private const HELD		: uint = 2;
-		static private const RELEASE	: uint = 3;
 
-		static private const START_PRESS:uint = 9999;
-		
+		static private const START_PRESS: uint = 9999;
+		static private const RELEASED	: uint = 3333;
 		
 		static private var keys		: Vector.<uint>;
 		static private var active	: Vector.<KeyState>;
@@ -95,8 +94,13 @@ package engine
 					keys[code] = PRESS;
 					keyState.frame = Time.frameCount;
 				}
+				
+				if ( keys[code] == HELD && keyState.frame < Time.frameCount )
+				{
+					keys[code] = RELEASED;
+					keyState.frame = Time.frameCount;
+				}
 			}
-			
 		}
 		
 		/// Has a key just been pressed in this frame?
@@ -113,7 +117,7 @@ package engine
 		
 		static public function getKeyRelease( code:uint ):Boolean
 		{
-			return keys[ code ] == RELEASE;
+			return keys[ code ] == RELEASED;
 		}
 	}
 }

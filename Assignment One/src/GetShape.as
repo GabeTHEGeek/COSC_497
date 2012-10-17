@@ -1,6 +1,5 @@
 package  
 {
-	
 	public class GetShape
 	{
 		

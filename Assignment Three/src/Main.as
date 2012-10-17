@@ -72,7 +72,5 @@ package
 			
 			trace( out );
 		}
-		
-		
 	}
 }
