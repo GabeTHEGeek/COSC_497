@@ -1,0 +1,2 @@
+This was the hardest project for me. I had a bunch of trouble with the input system and had to ask for help from my peers. Implementing the mouse was not too hard but the release and double tap took a lot of time.
+I did learn the importance of adding onto a game engine and customizing it to my needs. If there was anything to be said about this project, I would want to spend more time going over the input system and tracking the frames.

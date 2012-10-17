@@ -52,9 +52,12 @@ package
 			// Generate a string based on the input state of Spacebar
 			var out:String =
 				String( Time.frameCount ) + ": " +
-				"getKeyDown: " + Input.getKeyDown( Keyboard.SPACE ) + 
-				"    getKey: " + Input.getKey( Keyboard.SPACE ) +
-								 Input.getKeyRelease( Keyboard.SPACE );
+				"KeyDown: "         + Input.getKeyDown( Keyboard.SPACE ) + 
+				"    KeyHeld: "     + Input.getKeyHeld( Keyboard.SPACE ) +
+				"	 KeyUp: "       + Input.getKeyUp( Keyboard.SPACE ) +
+				"	 KeyReleased: " + Input.getKeyReleased( Keyboard.SPACE ) +
+				"	 DoubleTap: "   + Input.DoubleTap( Keyboard.SPACE ) +				
+				" 	 Mousedown: "   + Input.getMouseButton(0);
 
 			// Populate a textfield on the screen based on the frame
 			var tf:TextField = outLines[ Time.frameCount % MAX_LINES ];
@@ -63,14 +66,18 @@ package
 			// Change the color of the text field based on the Spacebar's state
 			if ( Input.getKeyDown( Keyboard.SPACE ) )
 				tf.textColor = 0xff0000;
-			else if ( Input.getKey( Keyboard.SPACE ) )
-				tf.textColor = 0xccff00;
-			else if ( Input.getKeyRelease( Keyboard.SPACE ) )
-				tf.textColor = 0x00CCff;
+			else if ( Input.getKeyHeld( Keyboard.SPACE ) )
+				tf.textColor = 0x00ff00;			
+			else if (Input.getKeyReleased( Keyboard.SPACE ) )
+				tf.textColor = 0x0000ff;			
+			else if (Input.getMouseButton(0))
+				tf.textColor = 0xFF7902;	
+			else if (Input.DoubleTap( Keyboard.SPACE ))
+				tf.textColor = 0xff33ff;
 			else
-				tf.textColor = 0x000000;
-			
-			trace( out );
+				tf.textColor = 0xffffff;
 		}
+		
+		
 	}
 }
