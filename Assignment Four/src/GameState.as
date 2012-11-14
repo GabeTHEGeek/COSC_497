@@ -15,17 +15,17 @@ package
 	{
 		private const ZOMBIE_BASE		:int = 50;	// guaranteed # of zombies
 		private const ZOMBIE_MULTIPLIER	:int = 10;	// how many more zombies per level
+		private var POINTS_PER_KILL		:int = 20;
 		
-		private var player			:Player;
-		private var zombies			:Vector.<Zombie>;
-		private var bullets			:Vector.<Bullet>;
+		private var player			    :Player;
+		private var zombies				:Vector.<Zombie>;
+		private var bullets				:Vector.<Bullet>;
 		
-		private var tf				:TextField;
-		private var POINTS_PER_KILL	:int = 20;
-		private var score			:int = 0;
-		private var console			:Console;
-		private var ConsoleActive   :Boolean = true;
-		private var cd				:ConsoleDisplay;
+		private var tf					:TextField;
+		private var score				:int = 0;
+		private var console				:Console;
+		private var ConsoleActive   	:Boolean = true;
+		private var cd					:ConsoleDisplay;
 		
 		
 		
@@ -154,7 +154,7 @@ package
 			if ( Input.getKeyDown(Keyboard.BACKQUOTE) && ConsoleActive == true)
 			{
 				Display.console.addChild(cd);
-				Systems.console.add("");
+				//Systems.console.add("");
 				Display.stage.removeChildAt(2);
 				ConsoleActive = false;
 			}

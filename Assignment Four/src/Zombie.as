@@ -12,12 +12,12 @@ package
 	 */
 	public class Zombie extends Sprite implements IDisposable
 	{
-		private const SPEED:Number = 50;
+		private const SPEED		:Number = 50;
 		
-		private var target	:Sprite;
-		private var speed	:Number;
-		public var zombieName:String;
-		public var isDisposed:Boolean = false;
+		private var target		:Sprite;
+		private var speed		:Number;
+		public var zombieName	:String;
+		public var isDisposed	:Boolean = false;
 		
 		
 		/// CTOR
